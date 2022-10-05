@@ -1,17 +1,21 @@
-﻿using UnityEditor;
+﻿using PathCreation;
+using UnityEditor;
 using UnityEngine;
 
 public class Plane : TimelineObject
 {
     [SerializeField] private int _currentSceneIndex;
-    [SerializeField] private MotionInfo[] _motionInfos;
+    [SerializeField] private float _t;
+    [SerializeField, NonReorderable, Space] private PathCreator[] _pathCreators;
 
-    private MotionInfo Info => _motionInfos[_currentSceneIndex];
+    // [SerializeField, NonReorderable] private MotionInfo[] _motionInfos;
+
+   // private MotionInfo Info => _motionInfos[_currentSceneIndex];
     
     private void UpdateTransform()
     {
-        transform.position = Info.PathCreator.path.GetPointAtTime(Info.T);
-        transform.rotation = Info.PathCreator.path.GetRotation(Info.T);
+        transform.position = _pathCreators[_currentSceneIndex].path.GetPointAtTime(_t);
+        transform.rotation = _pathCreators[_currentSceneIndex].path.GetRotation(_t);
     }
 
     protected override void SceneView_DuringSceneGui(SceneView obj)
