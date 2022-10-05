@@ -1,24 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using PathCreation;
+﻿using PathCreation;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.Playables;
 
-public class Plane : MonoBehaviour
+public class Plane : TimelineObject
 {
     [SerializeField] private float _t;
     [SerializeField] private PathCreator _pathCreator;
  
-    private void Update()
-    {
-        UpdateTransform();
-    }
-
-    public void UpdateTransform()
+    private void UpdateTransform()
     {
         transform.position = _pathCreator.path.GetPointAtTime(_t);
         transform.rotation = _pathCreator.path.GetRotation(_t);
+    }
+
+    protected override void SceneView_DuringSceneGui(SceneView obj)
+    {
+        base.SceneView_DuringSceneGui(obj);
+        
+        UpdateTransform();
     }
 }
