@@ -600,7 +600,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
-  - {fileID: -1654163564344160894}
   - {fileID: -8299831341130208371}
   m_FixedDuration: 6.999999999999
   m_EditorSettings:
