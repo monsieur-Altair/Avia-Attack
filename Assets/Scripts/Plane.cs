@@ -1,4 +1,5 @@
-﻿using PathCreation;
+﻿using System;
+using PathCreation;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,8 +12,13 @@ public class Plane : TimelineObject
     // [SerializeField, NonReorderable] private MotionInfo[] _motionInfos;
 
    // private MotionInfo Info => _motionInfos[_currentSceneIndex];
-    
-    private void UpdateTransform()
+
+   private void Update()
+   {
+       UpdateTransform();
+   }
+
+   private void UpdateTransform()
     {
         transform.position = _pathCreators[_currentSceneIndex].path.GetPointAtTime(_t);
         transform.rotation = _pathCreators[_currentSceneIndex].path.GetRotation(_t);
