@@ -3,9 +3,9 @@ Scene 1     0:06 - 0:09    - second appearance      06.10
 Scene 2     0:09 - 0:16    - 3 plane scene          06.10
 Scene 3     0:16 - 0:24    - first hit              07.10
 Scene 4     0:24 - 0:28    - aim scene              07.10
-Scene 5     0:28 - 0:30    - cannon scene           08.10 -skipped
+Scene 5     0:28 - 0:30    - cannon scene           08.10 - skipped
 Scene 6     0:30 - 0:34    - second hit             08.10
-Scene 7     0:34 - 0:42    - front-back scene       08.10  
+Scene 7     0:34 - 0:42    - front-back scene       08.10
 Scene 8     0:42 - 0:46    - single plane side      09.10
 Scene 9     0:46 - 0:51    - near wind scene        09.10
 Scene 10    0:51 - 0:53    - aim 2 scene            09.10
