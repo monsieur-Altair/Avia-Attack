@@ -7,9 +7,10 @@ public class Plane : TimelineObject
 {
     [SerializeField] protected int _currentSceneIndex;
     [SerializeField] protected float _t;
+    [SerializeField] private Transform _planeModel;
     [SerializeField, NonReorderable, Space] protected PathCreator[] _pathCreators;
 
-   private void LateUpdate()
+    private void LateUpdate()
    {
        UpdateTransform();
    }
@@ -26,4 +27,15 @@ public class Plane : TimelineObject
         
         UpdateTransform();
     }
+
+    public void OnFarSceneStarted()
+    {
+        _planeModel.rotation = Quaternion.Euler(-60, 0, 180);
+    }
+    
+    public void OnFarSceneEnded()
+    {
+        _planeModel.rotation = Quaternion.Euler(-90, 0, 180);
+    }
+
 }
