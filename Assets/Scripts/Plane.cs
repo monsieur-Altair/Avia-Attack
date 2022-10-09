@@ -13,7 +13,7 @@ public class Plane : TimelineObject
 
    // private MotionInfo Info => _motionInfos[_currentSceneIndex];
 
-   private void Update()
+   private void LateUpdate()
    {
        UpdateTransform();
    }
