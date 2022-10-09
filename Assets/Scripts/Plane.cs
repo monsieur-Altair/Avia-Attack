@@ -9,10 +9,6 @@ public class Plane : TimelineObject
     [SerializeField] protected float _t;
     [SerializeField, NonReorderable, Space] protected PathCreator[] _pathCreators;
 
-    // [SerializeField, NonReorderable] private MotionInfo[] _motionInfos;
-
-   // private MotionInfo Info => _motionInfos[_currentSceneIndex];
-
    private void LateUpdate()
    {
        UpdateTransform();
