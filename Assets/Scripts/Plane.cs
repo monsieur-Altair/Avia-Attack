@@ -38,4 +38,8 @@ public class Plane : TimelineObject
         _planeModel.rotation = Quaternion.Euler(-90, 0, 180);
     }
 
+    public void SetPlaneRot(Quaternion rot)
+    {
+        _planeModel.localRotation = rot;
+    }
 }

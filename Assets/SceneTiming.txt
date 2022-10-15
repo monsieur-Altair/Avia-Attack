@@ -12,8 +12,8 @@ Scene 10    0:51 - 0:53    - aim 2 scene            09.10
 Scene 11    0:53 - 0:56    - bomb launch            09.10
 Scene 12    0:56 - 0:59    - bomb flight            15.10
 Scene 13    0:59 - 1:05    - plane and aerocarrier  15.10
-
 Scene 14    1:05 - 1:10    - battle landscape       15.10
+
 Scene 15    1:10 - 1:14    - armada backside        15.10
 Scene 16    1:14 - 1:18    - armada frontside       15.10
 Scene 17    1:18 - 1:21    - bomb launch 2          15.10
