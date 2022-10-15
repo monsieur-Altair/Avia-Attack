@@ -10,5 +10,5 @@ Scene 8     0:42 - 0:46    - single plane side      09.10
 Scene 9     0:46 - 0:51    - near wind scene        09.10
 Scene 10    0:51 - 0:53    - aim 2 scene            09.10
 Scene 11    0:53 - 0:56    - bomb launch            09.10
-Scene 11    0:56 - 0:59    - bomb flight            
-Scene 12    0:59 - 1:05    - plane and aerocarrier 
+Scene 11    0:56 - 0:59    - bomb flight            15.10
+Scene 12    0:59 - 1:05    - plane and aerocarrier  15.10
