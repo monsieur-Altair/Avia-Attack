@@ -28,7 +28,7 @@ height - min particle size
 87 - 0.035
 so close - 0.01
 
-gun script, gun effect, 
-explosion effect,
+gun effect (TODO: gun script) 
+explosion effect
 camera transitions, cannon scene, lightning configurations
 
