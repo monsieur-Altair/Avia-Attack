@@ -7,7 +7,8 @@ Shader "Bullet"
         _Metallic ("Metallic", Range(0,1)) = 0.0
         _BotEmissionColor ("Bot Emission Color", Color) = (1,1,1,1)
         _TopEmissionColor ("Top Emission Color", Color) = (1,1,1,1)
-        _Coefficient ("Coefficient", Range(-1,1)) = 0
+        _Coefficient ("Coefficient", Range(0,1)) = 0
+        
     }
     SubShader
     {
