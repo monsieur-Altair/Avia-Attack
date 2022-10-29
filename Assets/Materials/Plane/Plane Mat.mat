@@ -81,12 +81,12 @@ Material:
     - _RampSmooth: 0.462
     - _RampSmoothAdd: 0.75
     - _RampThreshold: 0.831
-    - _RimMax: 0.85
-    - _RimMin: 0.6
+    - _RimMax: 0.205
+    - _RimMin: 0
     - _RimStrength: 0
     - _SmoothnessTextureChannel: 0
     - _SpecBlend: 0.13
-    - _SpecSmooth: 0.099
+    - _SpecSmooth: 0.091
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _TCP2_DISABLE_WRAPPED_LIGHT: 1

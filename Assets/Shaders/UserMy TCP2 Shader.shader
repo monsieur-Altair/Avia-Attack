@@ -105,6 +105,7 @@ Shader "Toony Colors Pro 2/User/My TCP2 Shader"
 		// Main Surface Shader
 		Blend SrcAlpha OneMinusSrcAlpha
 		Cull Back
+		Zwrite on
 
 		CGPROGRAM
 
