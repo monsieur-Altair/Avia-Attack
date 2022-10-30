@@ -21,7 +21,7 @@ namespace DefaultNamespace
 
         private IEnumerator WaitAndDo()
         {
-            yield return new WaitForSeconds(63.5f);
+            yield return new WaitForSeconds(63.5f+2f);
             SetNewRotation();
         }
 

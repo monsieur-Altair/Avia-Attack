@@ -30,12 +30,14 @@ public class Plane : TimelineObject
 
     public void OnFarSceneStarted()
     {
-        _planeModel.rotation = Quaternion.Euler(-60, 0, 180);
+        Debug.LogError("on far started");
+        _planeModel.localRotation = Quaternion.Euler(-60, 0, 180);
     }
     
     public void OnFarSceneEnded()
     {
-        _planeModel.rotation = Quaternion.Euler(-90, 0, 180);
+        Debug.LogError("on far ended");
+        _planeModel.localRotation = Quaternion.Euler(-90, 0, 180);
     }
 
     public void SetPlaneRot(Quaternion rot)
