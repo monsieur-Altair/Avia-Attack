@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -7,7 +8,6 @@ namespace DefaultNamespace
         [Space] 
         [SerializeField] private ParticleSystem _personalExplosion;
         [SerializeField] private ParticleSystem _personalSmokeFlow;
-
         public void Play1()
         {
             if (_personalExplosion != null)
