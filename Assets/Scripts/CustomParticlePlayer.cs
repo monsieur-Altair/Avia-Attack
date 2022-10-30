@@ -10,8 +10,11 @@ namespace DefaultNamespace
 
         public void Play1()
         {
-            if(_personalExplosion!=null)
+            if (_personalExplosion != null)
+            {
+                _personalExplosion.transform.parent = null;
                 _personalExplosion.Play(true);
+            }
             if(_personalSmokeFlow!=null)
                 _personalSmokeFlow.Play(true);
         }

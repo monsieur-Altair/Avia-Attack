@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
+  m_Parent: {fileID: -819220632413724747}
   m_Children: []
   m_Clips:
   - m_Version: 1
@@ -11836,6 +11836,7 @@ MonoBehaviour:
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
   m_Children:
+  - {fileID: -8702387682023530596}
   - {fileID: -4144536903121711537}
   - {fileID: -1678327406350289693}
   - {fileID: -3822121041987591189}
@@ -13296,7 +13297,6 @@ MonoBehaviour:
   m_Tracks:
   - {fileID: -8299831341130208371}
   - {fileID: 6814247964057252213}
-  - {fileID: -8702387682023530596}
   - {fileID: -6789277817415483623}
   - {fileID: -8064571550625407415}
   - {fileID: 8961926316460563330}
