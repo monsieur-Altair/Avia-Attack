@@ -20,8 +20,6 @@ Scene 18    1:21 - 1:23    - bomb flight            15.10
 Scene 19    1:23 - 1:28    - plane and aerocarrier2 16.10
 
 water effect, foam - done 
-
-(TODO: script for matching min size to current scene)
 height - min particle size 
 1288 - 0.01
 644 - 0.012
@@ -29,9 +27,10 @@ height - min particle size
 161 - 0.035 
 87 - 0.035
 so close - 0.01
+explosion effect
+
 
 gun effect (TODO: gun script) 
-explosion effect
 camera transitions, cannon scene, lightning configurations
 
 aero mesh
