@@ -18,10 +18,6 @@ namespace DefaultNamespace
         [SerializeField] private Transform _staticParent;
         [SerializeField] private float _rad = 10f;
         
-        //[Space] 
-        //[SerializeField] private ParticleSystem _personalExplosion;
-        //[SerializeField] private ParticleSystem _personalSmokeFlow;
-        
         private float _localBot;
         private float _localTop;
         private float _localFar;

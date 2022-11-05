@@ -7,6 +7,7 @@ namespace DefaultNamespace
     public class PoolSpawner : MonoBehaviour
     {
         [SerializeField] private ParticleController[] _particleControllers;
+        [SerializeField] private AnimatedCannon _animatedCannon;
         
         
         private Pool _pool;
@@ -20,6 +21,8 @@ namespace DefaultNamespace
             {
                 particleController.OnAwake(_pool);
             }
+
+            _animatedCannon.OnAwake(_pool);
         }
     }
 }
