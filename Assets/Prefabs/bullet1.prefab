@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3220428767599158258}
   - component: {fileID: 1954168009861721175}
   - component: {fileID: 4393945583470876829}
+  - component: {fileID: 2832202835226333186}
   m_Layer: 0
   m_Name: bullet1
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2880775759650240840}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.012, y: 22.035, z: 57.46}
-  m_LocalScale: {x: 1, y: 1, z: 1.48}
+  m_LocalScale: {x: 4, y: 4, z: 5.9200015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2832202835226333186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2880775759650240840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7f15377f3a4a11bbf1f54193ca7d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _freeTimeout: 0
+  _freeAfterTime: 0

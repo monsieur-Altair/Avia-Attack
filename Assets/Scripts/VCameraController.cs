@@ -29,7 +29,10 @@ namespace DefaultNamespace
         {
             _currentIndex++;
 
-            Debug.LogError("switched"+_currentIndex);
+            //Debug.LogError("switched"+_currentIndex);
+            
+            if(_currentIndex is 1 or 2)
+                return;
             
             SetToZero();
             Extensionss.Wait(_returningDelay).OnComplete(ResetToCached);

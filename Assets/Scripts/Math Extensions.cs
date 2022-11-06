@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -65,6 +66,11 @@ namespace Extensions
         public static Tween Wait(float dur)
         {
             return DOTween.To(() => 0, _ => { }, 0, dur);
+        }
+        
+        public static T GetRandom<T>(this List<T> list)
+        {
+            return list[Random.Range(0, list.Count)];
         }
     }
 }

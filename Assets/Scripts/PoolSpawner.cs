@@ -8,14 +8,14 @@ namespace DefaultNamespace
     {
         [SerializeField] private ParticleController[] _particleControllers;
         [SerializeField] private AnimatedCannon _animatedCannon;
-        
+        [SerializeField] private CannonsController _cannonsController;
         
         private Pool _pool;
         
         
         private void Awake()
         {
-            _pool = new Pool();
+            _pool = new Pool(transform);
 
             foreach (ParticleController particleController in _particleControllers)
             {
@@ -23,6 +23,12 @@ namespace DefaultNamespace
             }
 
             _animatedCannon.OnAwake(_pool);
+            _cannonsController.OnAwake(_pool);
+        }
+
+        public void OnSceneSwitched()
+        {
+            _cannonsController.OnSceneSwitched();
         }
     }
 }

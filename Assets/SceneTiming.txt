@@ -28,10 +28,14 @@ height - min particle size
 87 - 0.035
 so close - 0.01
 explosion effect
-
-camera transitions,
-gun effect (TODO: gun script) 
 cannon scene, aero mesh
+camera transitions,
 
+gun effect (TODO: gun script)
+camera effect
+
+64.7f - water splash
+88 - biggest explosion
+записка
 lightning configurations
 
