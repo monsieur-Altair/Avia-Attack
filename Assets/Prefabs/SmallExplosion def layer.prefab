@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 47049721388188378}
   - component: {fileID: 173895069390732086}
   - component: {fileID: 174205424320558802}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: AdditonalSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 52082053057865178}
   - component: {fileID: 173522414353327580}
   - component: {fileID: 174207914014129204}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: Shockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9785,8 +9785,8 @@ GameObject:
   - component: {fileID: 173484802430647962}
   - component: {fileID: 174868909964391414}
   - component: {fileID: 5494079109708021059}
-  m_Layer: 1
-  m_Name: SmallExplosion
+  m_Layer: 0
+  m_Name: SmallExplosion def layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

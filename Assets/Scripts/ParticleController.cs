@@ -17,6 +17,8 @@ namespace DefaultNamespace
         [SerializeField] private int _startExplosionPooledAmount;
         [SerializeField] private Transform _staticParent;
         [SerializeField] private float _rad = 10f;
+        [Space, SerializeField] private ParticleSystem _waterSplashPS;
+        [Space, SerializeField] private ParticleSystem _lastExplosionPS;
         
         private float _localBot;
         private float _localTop;
@@ -25,7 +27,6 @@ namespace DefaultNamespace
         private float _localNear;
         private float _localRight;
         
-        private Transform _transform;
         private float _elapsedTime;
         private Pool _pool;
 
@@ -78,7 +79,6 @@ namespace DefaultNamespace
             _localFar    = localPosRFP.z;
             _localNear   = localPosBNP.z;
 
-            _transform = transform;
             _elapsedTime = 0.0f;
 
             _pool = pool;
@@ -90,6 +90,25 @@ namespace DefaultNamespace
                 SpawnExplosion();
             }
         }
+
+        public void OnLastExploded()
+        {
+            if (_lastExplosionPS != null)
+            {
+                _lastExplosionPS.Play(true);
+            }
+        }
+        
+        public void OnWaterSplashed()
+        {
+            if (_waterSplashPS != null)
+            {
+                _waterSplashPS.transform.localPosition = Vector3.zero;
+                _waterSplashPS.Play(true);
+                _waterSplashPS.transform.SetParent(null);
+            }
+        }
+        
         private void Update()
         {
             _elapsedTime += Time.deltaTime;
@@ -108,7 +127,7 @@ namespace DefaultNamespace
             if (pos == null)
                 return;
 
-            PooledParticleSystem particle = _pool.Get(_baseExplosion, parent: _transform, localPosition: pos);
+            PooledParticleSystem particle = _pool.Get(_baseExplosion, parent: transform, localPosition: pos);
             particle.Transform.parent = _staticParent;
         }
 
@@ -119,7 +138,7 @@ namespace DefaultNamespace
             float localZ = UnityEngine.Random.Range(_localNear, _localFar);
 
             Vector3 resultPos = new (localX, localY, localZ);
-            Vector3 localDeathZoneCenter = _transform.InverseTransformPoint(_deathZoneCentrePoint.position);
+            Vector3 localDeathZoneCenter = transform.InverseTransformPoint(_deathZoneCentrePoint.position);
 
             if (Vector3.Distance(localDeathZoneCenter, resultPos) < _deathZoneRadius)
                 return null;

@@ -10,9 +10,10 @@ namespace DefaultNamespace
         private float _speed;
         
         private Vector3 _direction;
-        private Vector3 _launchPoint;
         private Transform _transform;
         private float _elapsedTime;
+
+        public Transform LaunchPoint { get; private set; }
 
         public float FlightTime { get; private set; }
 
@@ -41,17 +42,17 @@ namespace DefaultNamespace
         
         public void SetPosition()
         {
-            _transform.position = _launchPoint + _speed * _elapsedTime * _direction;
+            _transform.position = LaunchPoint.position + _speed * _elapsedTime * _direction;
         }
 
-        public void SetBaseInfo(float speed, Vector3 direction, Vector3 spawnPoint, float flightTime)
+        public void SetBaseInfo(float speed, Vector3 direction, Transform spawnPoint, float flightTime)
         {
             _speed = speed;
             _direction = direction;
-            _launchPoint = spawnPoint;
+            LaunchPoint = spawnPoint;
             
             _transform.forward = direction;
-            _transform.position = _launchPoint;
+            _transform.position = LaunchPoint.position;
 
             _elapsedTime = 0.0f;
             FlightTime = flightTime * FLIGHT_COEFFICIENT;

@@ -34,8 +34,19 @@ camera transitions,
 gun effect (TODO: gun script)
 camera effect
 
-64.7f - water splash
-88 - biggest explosion
+0 - radx2
+7 - radx3
+9 - radx2
+12 custom target
+
+vcam1 late ends,
+vcam6 33th sec = forward bullet
+
+vcam9 specAlg
+vcam10 specAlg
+vcam11 specAlg,
+vcam17 specAlg
+
+
 записка
 lightning configurations
-
