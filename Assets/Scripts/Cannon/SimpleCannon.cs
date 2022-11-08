@@ -12,13 +12,7 @@ namespace DefaultNamespace
     {
         [SerializeField, NonReorderable] private List<Transform> _spawnPoints;
         [Space, SerializeField] private PFXParams _explosionPS;
-        [Space, SerializeField] private int _signX;
-        [Space, SerializeField] private int _signY;
-        [SerializeField] private float _minXT;
-        [SerializeField] private float _maxXT;
-        [SerializeField] private float _minYT;
-        [SerializeField] private float _maxYT;
-        
+        [SerializeField] private Vector2 _piCoeff;
         
         private List<CannonBullet> _bullets;
         private Transform _target;
@@ -50,6 +44,7 @@ namespace DefaultNamespace
         private bool _isActive = true;
         private float _flightTimeCoefficient;
         private bool _usePFX;
+        private Transform _parent;
 
         public void OnAwake(Pool pool, float frequency, float bulletSpeed, List<CannonBullet> cannonBullets, 
             float minRadius, float maxRadius)
@@ -67,6 +62,7 @@ namespace DefaultNamespace
             _minRadiusCoefficient = 1.0f;
             _maxRadiusCoefficient = 1.0f;
             _usePFX = false;
+            _parent = transform.parent.parent;
         }
         
         public void OnSceneSwitched(Transform target, float minRadCoeff, float maxRadCoeff, float freqCoeff, 
@@ -146,17 +142,28 @@ namespace DefaultNamespace
         private Vector3 GetDistance(Vector3 startPos)
         {
             _startPos = startPos;
-            zAxis = (_target.position - startPos).normalized;
-            negativeXAxis = Vector3.Cross(zAxis, Vector3.up).normalized;// * Quaternion.LookRotation();
+            zAxis = (_target.position - _parent.position).normalized;
+            negativeXAxis = Vector3.Cross(zAxis, Vector3.up).normalized;
             yAxis = Vector3.Cross(negativeXAxis,zAxis).normalized;
             negativeXAxis = Vector3.Cross(zAxis, yAxis).normalized;
 
-            float xOffset = Mathf.Lerp(MinRadius, MaxRadius, GetXT()) * GetXSign();
-            float yOffset = Mathf.Lerp(MinRadius, MaxRadius, GetYT()) * GetYSign();
-
-            Vector3 targetPoint = _target.position + xOffset * -negativeXAxis + yOffset * yAxis;
-  
+            Vector2 off = GetOffset();
+            Vector3 targetPoint = _target.position + off.x * negativeXAxis + off.y * yAxis;
             return targetPoint - startPos;
+        }
+
+        private Vector2 GetOffset()
+        {
+            return PolarToCartesian(
+                Random.Range(MinRadius, MaxRadius), 
+                Random.Range(Mathf.PI * _piCoeff.x, Mathf.PI * _piCoeff.y));
+        }
+
+        private static Vector2 PolarToCartesian(float radius, float angle)
+        {
+            float x = radius * Mathf.Cos(angle);
+            float y = radius * Mathf.Sin(angle);
+            return new Vector2(x, y);
         }
 
         private void OnDrawGizmos()
@@ -170,34 +177,6 @@ namespace DefaultNamespace
             Gizmos.DrawLine(_target.position, _target.position + 7f * negativeXAxis);
             Gizmos.color = Color.red;
             Gizmos.DrawLine(_target.position, _target.position + 7f * yAxis);
-        }
-
-        private int GetXSign()
-        {
-            return _useCustom 
-                ? _signX 
-                : Random.Range(0, 2) == 0 ? 1 : -1;
-        }
-
-        private int GetYSign()
-        {
-            return _useCustom 
-                ? _signY
-                : Random.Range(0, 2) == 0 ? 1 : -1;
-        }
-
-        private float GetXT()
-        {
-            return _useCustom
-                ? Random.Range(_minXT, _maxXT)
-                : Random.Range(0f, 1f);
-        }
-        
-        private float GetYT()
-        {
-            return _useCustom
-                ? Random.Range(_minYT, _maxYT)
-                : Random.Range(0f, 1f);
         }
     }
 }

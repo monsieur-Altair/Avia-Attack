@@ -34,19 +34,12 @@ camera transitions,
 gun effect (TODO: gun script)
 camera effect
 
-0 - radx2
-7 - radx3
-9 - radx2
-12 custom target
+1 - targte->1->plane2
+13 - ?
+15 custom  point camera ?
 
 vcam1 late ends,
 vcam6 33th sec = forward bullet
-
-vcam9 specAlg
-vcam10 specAlg
-vcam11 specAlg,
-vcam17 specAlg
-
 
 записка
 lightning configurations
