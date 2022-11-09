@@ -30,13 +30,11 @@ so close - 0.01
 explosion effect
 cannon scene, aero mesh
 camera transitions,
-
 gun effect (TODO: gun script)
+
 camera effect
 
-1 - targte->1->plane2
-13 - ?
-15 custom  point camera ?
+1 - targte->1->plane2 -------------------
 
 vcam1 late ends,
 vcam6 33th sec = forward bullet

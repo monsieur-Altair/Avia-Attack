@@ -8,13 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ship Hiryu Mat Type94_Mod1
-  m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
+  m_Shader: {fileID: 47, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
-  - TCP2_DISABLE_WRAPPED_LIGHT
-  - TCP2_SPEC_TOON
+  - _EMISSION
   - _METALLICGLOSSMAP
   - _NORMALMAP
-  m_InvalidKeywords: []
+  - _SPECGLOSSMAP
+  - _SPECULARHIGHLIGHTS_OFF
+  m_InvalidKeywords:
+  - TCP2_DISABLE_WRAPPED_LIGHT
+  - TCP2_SPEC_TOON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -64,6 +67,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: 9fe7db702aa0eb941a74e25b9a230944, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
@@ -87,7 +94,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecBlend: 0.183
     - _SpecSmooth: 0.143
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SrcBlend: 1
     - _TCP2_DISABLE_WRAPPED_LIGHT: 1
     - _TCP2_RAMPTEXT: 0
