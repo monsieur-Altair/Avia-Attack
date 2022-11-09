@@ -66,7 +66,7 @@ namespace DefaultNamespace
         }
         
         public void OnSceneSwitched(Transform target, float minRadCoeff, float maxRadCoeff, float freqCoeff, 
-            float speedCoeff, float flightCoefficient, bool useExplosionPFX)
+            float speedCoeff, float flightCoefficient, bool useExplosionPFX, int frameCount = 1)
         {
             _target = target;
 
@@ -77,7 +77,7 @@ namespace DefaultNamespace
             _flightTimeCoefficient = flightCoefficient;
             _usePFX = useExplosionPFX;
             
-            StartCoroutine(WaitAndDo(1));
+            StartCoroutine(WaitAndDo(frameCount));
         }
 
         public void SetTarget(Transform target)

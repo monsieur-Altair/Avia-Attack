@@ -6,6 +6,7 @@ namespace DefaultNamespace
     public class PlaneRotationController : MonoBehaviour
     {
         [SerializeField, NonReorderable] private Plane[] _planes;
+        [SerializeField, NonReorderable] private Plane[] _noRotPlanes;
         
         private void Awake()
         {
@@ -14,8 +15,14 @@ namespace DefaultNamespace
             foreach (Plane plane in _planes)
             {
                 plane.SetPlaneRot(rot);
+                plane.OnAwake();
             }
 
+            foreach (Plane plane in _noRotPlanes)
+            {
+                plane.OnAwake();
+            }
+            
             StartCoroutine(WaitAndDo());
         }
 

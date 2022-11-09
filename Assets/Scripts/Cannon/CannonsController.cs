@@ -85,11 +85,12 @@ namespace DefaultNamespace
             Transform target = _targets[_sceneIndex];
             SimpleCannon.NewBulletAmount = GetBulletAmount(target);
             SceneInfo sceneInfo = _sceneInfos[_sceneIndex];
+            int frameCount = _sceneIndex == 3 ? 3 : 1;
             foreach (SimpleCannon cannon in _cannons)
             {
                 cannon.OnSceneSwitched(target, sceneInfo.MinRadCoefficient, sceneInfo.MaxRadCoefficient, 
                     sceneInfo.FreqCoefficient, sceneInfo.SpeedCoefficient, sceneInfo.FlightCoefficient, 
-                    sceneInfo.UseExplosionPFX);
+                    sceneInfo.UseExplosionPFX, frameCount);
             }
 
             if (_isActive == false)
@@ -102,7 +103,7 @@ namespace DefaultNamespace
         {
             float distance = Vector3.Distance(target.position, transform.position);
             float t = distance / _speed;
-            return Mathf.RoundToInt(_fireFrequency * t);
+            return Mathf.RoundToInt(_fireFrequency * _sceneInfos[_sceneIndex].FreqCoefficient * t);
         }
 
         private void Disable()
