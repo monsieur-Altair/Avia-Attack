@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using DG.Tweening;
 using Extensions;
 using Pool_And_Particles;
 using UnityEngine;
@@ -18,7 +20,7 @@ namespace DefaultNamespace
         [SerializeField] private Transform _staticParent;
         [SerializeField] private float _rad = 10f;
         [Space, SerializeField] private ParticleSystem _waterSplashPS;
-        [Space, SerializeField] private ParticleSystem _lastExplosionPS;
+        [Space, SerializeField] private List<ParticleSystem> _lastExplosionsPS;
         
         private float _localBot;
         private float _localTop;
@@ -93,9 +95,15 @@ namespace DefaultNamespace
 
         public void OnLastExploded()
         {
-            if (_lastExplosionPS != null)
+            if (_lastExplosionsPS != null)
             {
-                _lastExplosionPS.Play(true);
+                float interval = 0.5f;
+                int i = 0;
+                foreach (ParticleSystem ps in _lastExplosionsPS)
+                {
+                    Extensionss.Wait(interval * i++)
+                        .OnComplete(()=> ps.Play(true));                    
+                }
             }
         }
         
