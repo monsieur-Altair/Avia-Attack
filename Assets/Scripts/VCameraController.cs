@@ -20,6 +20,8 @@ namespace DefaultNamespace
         private CinemachineTransposer _cinemachineTransposer;
         private CinemachineComposer _cinemachineComposer;
 
+        public CinemachineVirtualCamera[] Cameras => _cameras;
+
         private void Awake()
         {
             _currentIndex = -1;

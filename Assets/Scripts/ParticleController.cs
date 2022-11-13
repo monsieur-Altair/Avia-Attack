@@ -97,11 +97,11 @@ namespace DefaultNamespace
         {
             if (_lastExplosionsPS != null)
             {
-                float interval = 0.5f;
+                float[] intervals = {0.0f, 0.3f, 1.2f};
                 int i = 0;
                 foreach (ParticleSystem ps in _lastExplosionsPS)
                 {
-                    Extensionss.Wait(interval * i++)
+                    Extensionss.Wait(intervals[i++])
                         .OnComplete(()=> ps.Play(true));                    
                 }
             }

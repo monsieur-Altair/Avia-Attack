@@ -1,23 +1,30 @@
-﻿Scene 0     0:00 - 0:06    - appearance             05.10
-Scene 1     0:06 - 0:09    - second appearance      06.10
-Scene 2     0:09 - 0:16    - 3 plane scene          06.10
-Scene 3     0:16 - 0:24    - first hit              07.10
-Scene 4     0:24 - 0:28    - aim scene              07.10
-Scene 5     0:28 - 0:30    - cannon scene           08.10
-Scene 6     0:30 - 0:34    - second hit             08.10
-Scene 7     0:34 - 0:42    - front-back scene       08.10
-Scene 8     0:42 - 0:46    - single plane side      09.10
-Scene 9     0:46 - 0:51    - near wind scene        09.10
-Scene 10    0:51 - 0:53    - aim 2 scene            09.10
-Scene 11    0:53 - 0:56    - bomb launch            09.10
-Scene 12    0:56 - 0:59    - bomb flight            15.10
-Scene 13    0:59 - 1:05    - plane and aerocarrier  15.10
-Scene 14    1:05 - 1:10    - battle landscape       15.10
-Scene 15    1:10 - 1:14    - armada backside        15.10
-Scene 16    1:14 - 1:18    - armada frontside       15.10
-Scene 17    1:18 - 1:21    - bomb launch 2          15.10
-Scene 18    1:21 - 1:23    - bomb flight            15.10
-Scene 19    1:23 - 1:28    - plane and aerocarrier2 16.10
+﻿Scene 0     0:00 - 0:06    - appearance             05.10   10    
+Scene 1     0:06 - 0:09    - second appearance      06.10   3
+Scene 2     0:09 - 0:16    - 3 plane scene          06.10   2
+Scene 3     0:16 - 0:24    - first hit              07.10   5 
+Scene 4     0:24 - 0:28    - aim scene              07.10   8     random
+Scene 5     0:28 - 0:30    - cannon scene           08.10   -custom
+Scene 6     0:30 - 0:34    - second hit             08.10   3
+Scene 7     0:34 - 0:42    - front-back scene       08.10   3 -    random
+Scene 8     0:42 - 0:46    - single plane side      09.10   3 - 
+Scene 9     0:46 - 0:51    - near wind scene        09.10   5------------------      
+Scene 10    0:51 - 0:53    - aim 2 scene            09.10   7    random
+Scene 11    0:53 - 0:56    - bomb launch            09.10   3 -    random
+Scene 12    0:56 - 0:59    - bomb flight            15.10   1      radnom
+Scene 13    0:59 - 1:05    - plane and aerocarrier  15.10   2
+Scene 14    1:05 - 1:10    - battle landscape       15.10   0      random 
+Scene 15    1:10 - 1:14    - armada backside        15.10   6 -    random
+Scene 16    1:14 - 1:18    - armada frontside       15.10   2 -    
+Scene 17    1:18 - 1:21    - bomb launch 2          15.10   4      random
+Scene 18    1:21 - 1:23    - bomb flight            15.10   2      random-------         
+Scene 19    1:23 - 1:28    - plane and aerocarrier2 16.10   2
+
+10  3   0.5
+
+2 - 3
+
+
+
 
 water effect, foam - done 
 height - min particle size 
@@ -31,10 +38,7 @@ explosion effect
 cannon scene, aero mesh
 camera transitions,
 gun effect (TODO: gun script)
-
 camera effect
-
-1 - targte->1->plane2 -------------------
 
 vcam1 late ends,
 vcam6 33th sec = forward bullet
