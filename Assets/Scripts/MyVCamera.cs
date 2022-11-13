@@ -6,6 +6,7 @@ namespace DefaultNamespace
 {
     public class MyVCamera : MonoBehaviour
     {
+        [SerializeField] private AudioClip _clip;
         [SerializeField] private CinemachineVirtualCamera _camera;
 
         public static event Action TransposerDisabled = delegate {  }; 

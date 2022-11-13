@@ -67,6 +67,12 @@ namespace Extensions
         {
             return DOTween.To(() => 0, _ => { }, 0, dur);
         }
+
+        public static Tween DoVolume(this AudioSource source, float start, float end, float dur)
+        {
+            source.volume = start;
+            return DOTween.To(() => source.volume, value => source.volume = value, end, dur);
+        }
         
         public static T GetRandom<T>(this List<T> list)
         {
