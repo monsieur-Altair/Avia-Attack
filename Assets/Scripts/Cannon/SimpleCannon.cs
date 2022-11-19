@@ -114,10 +114,11 @@ namespace DefaultNamespace
 
         private IEnumerator WaitAndDo(int count)
         {
-            for (int i = 0; i < count; i++)
-            {
-                yield return null;
-            }
+            yield return new WaitForSeconds(count / 60f);
+            // for (int i = 0; i < count; i++)
+            // {
+            //     yield return null;
+            // }
             
             for (int i = 0; i < NewBulletAmount; i++)
             {

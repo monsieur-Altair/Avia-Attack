@@ -28,6 +28,7 @@ namespace DefaultNamespace
         [SerializeField] private float _minRadius = 7.5f;
         [SerializeField] private float _maxRadius = 10.5f;
         [Space, SerializeField] private Transform _customTarget;
+        [SerializeField] private int _scene3bulletCount = 200;
         
         private Pool _pool;
         private bool _isActive = true;
@@ -85,7 +86,7 @@ namespace DefaultNamespace
             Transform target = _targets[_sceneIndex];
             SimpleCannon.NewBulletAmount = GetBulletAmount(target);
             SceneInfo sceneInfo = _sceneInfos[_sceneIndex];
-            int frameCount = _sceneIndex == 3 ? 3 : 1;
+            int frameCount = _sceneIndex == 3 ? 2 : 1;
             foreach (SimpleCannon cannon in _cannons)
             {
                 cannon.OnSceneSwitched(target, sceneInfo.MinRadCoefficient, sceneInfo.MaxRadCoefficient, 
@@ -101,6 +102,9 @@ namespace DefaultNamespace
 
         private int GetBulletAmount(Transform target)
         {
+            if (_sceneIndex == 3)
+                return _scene3bulletCount; 
+            
             float distance = Vector3.Distance(target.position, transform.position);
             float t = distance / _speed;
             return Mathf.RoundToInt(_fireFrequency * _sceneInfos[_sceneIndex].FreqCoefficient * t);
