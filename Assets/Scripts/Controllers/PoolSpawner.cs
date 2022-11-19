@@ -15,6 +15,7 @@ namespace DefaultNamespace
         
         private void Awake()
         {
+            Application.targetFrameRate = 60;
             _pool = new Pool(transform);
 
             foreach (ParticleController particleController in _particleControllers)

@@ -2,6 +2,8 @@
 
 public static class MenuItem
 {
+#if UNITY_EDITOR
+
     [UnityEditor.MenuItem("Max Tools/Subscribe Objects")]
     private static void SubscribeObjects()
     {
@@ -21,4 +23,5 @@ public static class MenuItem
             timelineObject.Unsubscribe();
         }
     }
+#endif
 }

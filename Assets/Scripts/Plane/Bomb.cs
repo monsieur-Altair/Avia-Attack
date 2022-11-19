@@ -1,5 +1,7 @@
 ﻿using PathCreation;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 public class Bomb : TimelineObject
@@ -23,6 +25,8 @@ public class Bomb : TimelineObject
         transform.position = _pathCreators[_currentIndex].path.GetPointAtTime(_t);
         transform.rotation = _pathCreators[_currentIndex].path.GetRotation(_t) * Quaternion.Euler(90, 0, 0);
     }
+#if UNITY_EDITOR
+    
 
     protected override void SceneView_DuringSceneGui(SceneView obj)
     {
@@ -30,4 +34,5 @@ public class Bomb : TimelineObject
         
         UpdateTransform();
     }
+    #endif
 }

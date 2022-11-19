@@ -38,7 +38,6 @@ public class WavesGenerator : MonoBehaviour
 
     private void Awake()
     {
-        Application.targetFrameRate = -1;
         fft = new FastFourierTransform(size, fftShader);
         gaussianNoise = GetNoiseTexture(size);
 
