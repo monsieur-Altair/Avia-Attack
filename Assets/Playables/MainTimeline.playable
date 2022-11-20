@@ -12953,6 +12953,34 @@ AnimationClip:
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 665470badaf8e7740857165a34bd2b28, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _isScriptActive
+    path: Mech/Bomb
+    classID: 114
+    script: {fileID: 11500000, guid: 863f283a393543edbe1773a463b17aeb, type: 3}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -12986,6 +13014,13 @@ AnimationClip:
       path: 0
       attribute: 731047489
       script: {fileID: 11500000, guid: 665470badaf8e7740857165a34bd2b28, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1305359502
+      attribute: 3789513675
+      script: {fileID: 11500000, guid: 863f283a393543edbe1773a463b17aeb, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 0
@@ -13371,6 +13406,34 @@ AnimationClip:
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 665470badaf8e7740857165a34bd2b28, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: _isScriptActive
+    path: Mech/Bomb
+    classID: 114
+    script: {fileID: 11500000, guid: 863f283a393543edbe1773a463b17aeb, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
