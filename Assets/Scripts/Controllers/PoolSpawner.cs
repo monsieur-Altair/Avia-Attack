@@ -9,7 +9,7 @@ namespace DefaultNamespace
         [SerializeField] private ParticleController[] _particleControllers;
         [SerializeField] private AnimatedCannon _animatedCannon;
         [SerializeField] private CannonsController _cannonsController;
-        
+        [SerializeField] private Aerocarrier _aerocarrier;
         private Pool _pool;
         
         
@@ -30,6 +30,7 @@ namespace DefaultNamespace
         public void OnSceneSwitched()
         {
             _cannonsController.OnSceneSwitched();
+            _aerocarrier.OnSceneSwitched();
         }
     }
 }

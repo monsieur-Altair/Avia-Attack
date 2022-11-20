@@ -394,6 +394,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 0}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 0}
 --- !u!4 &17841267
 Transform:
@@ -5504,8 +5505,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49205804}
-  m_LocalRotation: {x: 0.3026797, y: 0.8976342, z: 0.07403001, w: 0.31170085}
-  m_LocalPosition: {x: 143.94405, y: -900.98804, z: 1118.0162}
+  m_LocalRotation: {x: 0.20330842, y: 0.8818069, z: -0.04834135, w: 0.422783}
+  m_LocalPosition: {x: 155.30719, y: -1243.8926, z: 1086.9996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5681,8 +5682,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62028237}
-  m_LocalRotation: {x: -0.13518247, y: 0.91042525, z: 0.3819699, w: 0.083370365}
-  m_LocalPosition: {x: 228.70554, y: -1199.7864, z: 1046.0074}
+  m_LocalRotation: {x: 0.049940843, y: 0.8067142, z: 0.5663388, w: -0.16117871}
+  m_LocalPosition: {x: 3.0148869, y: -637.1255, z: 458.36325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6072,6 +6073,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 0}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 0}
 --- !u!95 &127191687
 Animator:
@@ -6100,8 +6102,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127191685}
-  m_LocalRotation: {x: -0.2455493, y: -0.007585451, z: -0.029751332, w: 0.96889776}
-  m_LocalPosition: {x: 119.03493, y: 175.08795, z: -361.37347}
+  m_LocalRotation: {x: -0.17562938, y: 0.09975212, z: -0.3866144, w: 0.8998518}
+  m_LocalPosition: {x: -262.94455, y: -137.74164, z: -777.30005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6383,6 +6385,7 @@ GameObject:
   - component: {fileID: 182722634}
   - component: {fileID: 182722633}
   - component: {fileID: 182722636}
+  - component: {fileID: 182722637}
   m_Layer: 0
   m_Name: Plane American 2
   m_TagString: Untagged
@@ -6426,6 +6429,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 38888179900554235}
   _delay: 0
   _personalSmokeFlow: {fileID: 8649866502537964279}
+  _explosionSound: {fileID: 182722637}
   _blades: {fileID: 0}
 --- !u!95 &182722634
 Animator:
@@ -6454,8 +6458,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182722632}
-  m_LocalRotation: {x: -0.19578901, y: 0.12651064, z: -0.03308968, w: 0.97188824}
-  m_LocalPosition: {x: 86.65505, y: 189.59846, z: -369.07043}
+  m_LocalRotation: {x: -0.36531335, y: 0.2452102, z: -0.737022, w: 0.5130466}
+  m_LocalPosition: {x: -241.46823, y: -149.65564, z: -767.21124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6495,6 +6499,102 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!82 &182722637
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182722632}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0dbff4303f80baf4e8428235eaf061e0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &193023077
 GameObject:
   m_ObjectHideFlags: 0
@@ -6899,6 +6999,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 0}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 0}
 --- !u!95 &220954858
 Animator:
@@ -12514,7 +12615,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361690539}
-  m_LocalRotation: {x: 0.019046845, y: 0.9711093, z: 0.22293557, w: -0.08296823}
+  m_LocalRotation: {x: 0.019046843, y: 0.9711093, z: 0.22293559, w: -0.08296822}
   m_LocalPosition: {x: 128.05998, y: -1400.27, z: 1423.2201}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13346,8 +13447,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463378070}
-  m_LocalRotation: {x: 0.58059967, y: -0.15543336, z: 0.11245897, w: 0.7912632}
-  m_LocalPosition: {x: 228.17007, y: -1134.9089, z: 999.9587}
+  m_LocalRotation: {x: 0.7186198, y: 0.052547887, z: -0.14089887, w: 0.6789491}
+  m_LocalPosition: {x: -10.077301, y: -559.1614, z: 445.85355}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23206,8 +23307,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486840307}
-  m_LocalRotation: {x: 0.5439375, y: 0.23597834, z: -0.16471292, w: 0.78823596}
-  m_LocalPosition: {x: 930.5684, y: 160.42993, z: -428.9079}
+  m_LocalRotation: {x: 0.5439375, y: 0.23597842, z: -0.16471298, w: 0.7882359}
+  m_LocalPosition: {x: 894.4793, y: -27.221191, z: -397.7369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23800,6 +23901,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 472197033}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 0}
 --- !u!4 &538036321
 Transform:
@@ -30081,8 +30183,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677303114}
-  m_LocalRotation: {x: 0.56446415, y: 0.08768619, z: -0.06051144, w: 0.81855345}
-  m_LocalPosition: {x: 34.960285, y: -21.961914, z: 65.51195}
+  m_LocalRotation: {x: 0.5644642, y: 0.08768625, z: -0.0605115, w: 0.81855345}
+  m_LocalPosition: {x: 45.280296, y: -164.23181, z: 113.39195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30527,6 +30629,7 @@ MonoBehaviour:
   - {fileID: 1839504419}
   _animatedCannon: {fileID: 8902720294727966749}
   _cannonsController: {fileID: 1839504420}
+  _aerocarrier: {fileID: 1839504422}
 --- !u!4 &707447484
 Transform:
   m_ObjectHideFlags: 0
@@ -30540,7 +30643,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &707447485
 MonoBehaviour:
@@ -31011,8 +31114,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721289695}
-  m_LocalRotation: {x: 0.5908356, y: -0.16617616, z: 0.68730307, w: 0.38847566}
-  m_LocalPosition: {x: 131.966, y: -1398.039, z: 554.35645}
+  m_LocalRotation: {x: 0.59083456, y: -0.16617484, z: 0.6873034, w: 0.38847727}
+  m_LocalPosition: {x: 131.966, y: -1398.039, z: 854.0011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31766,6 +31869,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 0}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 0}
 --- !u!95 &818195538
 Animator:
@@ -31794,8 +31898,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818195536}
-  m_LocalRotation: {x: -0.22094882, y: 0.11122491, z: -0.03171139, w: 0.96840334}
-  m_LocalPosition: {x: 82.70899, y: 171.56047, z: -360.28186}
+  m_LocalRotation: {x: -0.52594626, y: 0.51694036, z: -0.6259229, w: 0.25372}
+  m_LocalPosition: {x: 65.547485, y: -1307.1638, z: -1156.5076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31859,8 +31963,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850639678}
-  m_LocalRotation: {x: 0.99025404, y: 0.029806713, z: 0.11084055, w: 0.078885496}
-  m_LocalPosition: {x: 151.3493, y: -914.1642, z: 1103.0442}
+  m_LocalRotation: {x: 0.5215325, y: -0.06554474, z: 0.18670225, w: 0.82996994}
+  m_LocalPosition: {x: 163.63353, y: -1241.898, z: 1072.1036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32055,8 +32159,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906216259}
-  m_LocalRotation: {x: 0.45712206, y: -0.0679908, z: 0.14361331, w: 0.8750954}
-  m_LocalPosition: {x: 226.74107, y: -1142.923, z: 999.4513}
+  m_LocalRotation: {x: 0.6344624, y: 0.1597335, z: -0.060874615, w: 0.75381494}
+  m_LocalPosition: {x: -13.325419, y: -565.2141, z: 443.66275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32147,8 +32251,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917192255}
-  m_LocalRotation: {x: 0.60354763, y: -0.11932225, z: 0.09197957, w: 0.78296375}
-  m_LocalPosition: {x: 225.77972, y: -981.1349, z: 408.31253}
+  m_LocalRotation: {x: 0.60354763, y: -0.11932236, z: 0.09197965, w: 0.78296375}
+  m_LocalPosition: {x: 225.77972, y: -981.1349, z: 703.1648}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37597,7 +37701,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 50000
+  far clip plane: 5000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -37623,8 +37727,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.66712445, y: -0.05425317, z: 0.101125844, w: 0.73605376}
-  m_LocalPosition: {x: -0.021404494, y: 515.361, z: 579.8019}
+  m_LocalRotation: {x: -0.13270904, y: 0.90148216, z: 0.40255627, w: 0.087559655}
+  m_LocalPosition: {x: 78.48006, y: 212.37589, z: 518.3568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38046,6 +38150,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 0}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 0}
 --- !u!95 &990040069
 Animator:
@@ -38690,8 +38795,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058415688}
-  m_LocalRotation: {x: 0.2669593, y: 0.7817729, z: 0.26829085, w: 0.49556422}
-  m_LocalPosition: {x: 205.86987, y: -1182.7417, z: 1035.2117}
+  m_LocalRotation: {x: 0.46084398, y: 0.81830126, z: 0.2916171, w: 0.18156365}
+  m_LocalPosition: {x: -17.730295, y: -619.12177, z: 469.72415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38850,7 +38955,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063048901}
-  m_LocalRotation: {x: 0.0000000010998292, y: 0.9910399, z: 0.13356654, w: -0.000000008160535}
+  m_LocalRotation: {x: 0.000000005464427, y: 0.9910399, z: 0.13356653, w: -0.000000040545075}
   m_LocalPosition: {x: 150.37973, y: -1395.94, z: 1927.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46231,8 +46336,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388673179}
-  m_LocalRotation: {x: -0.36781397, y: 0.16126731, z: -0.075119644, w: 0.91272277}
-  m_LocalPosition: {x: 275.14288, y: 357.3523, z: -326.86295}
+  m_LocalRotation: {x: -0.17563075, y: 0.099752426, z: -0.3866142, w: 0.89985156}
+  m_LocalPosition: {x: -246.79657, y: -138.20203, z: -762.79803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46301,6 +46406,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 0}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 0}
 --- !u!114 &1388673183
 MonoBehaviour:
@@ -46357,7 +46463,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406928982}
-  m_LocalRotation: {x: 0.31191438, y: 0.11846969, z: -0.03923266, w: 0.94187856}
+  m_LocalRotation: {x: 0.09397435, y: 0.8932347, z: 0.38020802, w: -0.22077692}
   m_LocalPosition: {x: 162, y: -983.1, z: 769.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46918,8 +47024,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484081074}
-  m_LocalRotation: {x: 0.9844173, y: 0.02366945, z: 0.112311125, w: 0.13322389}
-  m_LocalPosition: {x: 151.23314, y: -913.9743, z: 1103.503}
+  m_LocalRotation: {x: 0.4751204, y: -0.075692035, z: 0.18277296, w: 0.8573945}
+  m_LocalPosition: {x: 163.63524, y: -1241.5015, z: 1071.783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47299,13 +47405,16 @@ MonoBehaviour:
   editorData:
     _bezierPath:
       points:
-      - {x: -6.78273, y: 56.890686, z: -9.10334}
-      - {x: -3.7721674, y: 36.809875, z: -9.345174}
-      - {x: 7.4387665, y: -3.9229126, z: -15.567098}
+      - {x: -6.7827215, y: 56.890686, z: -9.103378}
+      - {x: -3.7721589, y: 36.809875, z: -9.345212}
+      - {x: 7.436893, y: -3.921997, z: -15.56616}
       - {x: 4.1780634, y: -29.633484, z: 1.6095307}
-      - {x: 3.8398187, y: -32.300537, z: 3.3913255}
-      - {x: 15.17103, y: -40.072693, z: 6.007432}
-      - {x: 29.48228, y: -56.890686, z: 17.186543}
+      - {x: 4.1663976, y: -29.725525, z: 1.6710155}
+      - {x: 6.5788975, y: -32.622013, z: 3.7075086}
+      - {x: 8.146413, y: -34.24646, z: 4.5903344}
+      - {x: 12.419739, y: -38.674988, z: 6.9970746}
+      - {x: 20.151815, y: -46.16803, z: 10.661295}
+      - {x: 29.4823, y: -56.890686, z: 17.186485}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -47317,7 +47426,8 @@ MonoBehaviour:
       perAnchorNormalsAngle:
       - 0
       - 0
-      - 273.44934
+      - 272.00104
+      - 127.64395
       globalNormalsAngle: 270
       flipNormals: 0
     vertexPathUpToDate: 1
@@ -58008,8 +58118,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632115819}
-  m_LocalRotation: {x: -0.32828018, y: -0.007879112, z: -0.62332046, w: 0.7096772}
-  m_LocalPosition: {x: 150.87807, y: -914.96344, z: 1101.3218}
+  m_LocalRotation: {x: 0.64557385, y: 0.54299057, z: 0.5318075, w: -0.07467581}
+  m_LocalPosition: {x: 162.77246, y: -1243.4135, z: 1072.9923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58868,8 +58978,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767994699}
-  m_LocalRotation: {x: 0.5391055, y: -0.053874385, z: 0.1494827, w: 0.82711416}
-  m_LocalPosition: {x: 228.8399, y: -1162.3379, z: 1018.1503}
+  m_LocalRotation: {x: 0.672621, y: 0.15567546, z: -0.069575846, w: 0.7200732}
+  m_LocalPosition: {x: -6.6345, y: -581.5785, z: 448.17664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59140,6 +59250,7 @@ MonoBehaviour:
   _personalExplosion: {fileID: 0}
   _delay: 0
   _personalSmokeFlow: {fileID: 0}
+  _explosionSound: {fileID: 0}
   _blades: {fileID: 1572452237892780785}
 --- !u!95 &1797686379
 Animator:
@@ -59168,8 +59279,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797686377}
-  m_LocalRotation: {x: -0.34207037, y: 0.106274664, z: -0.110296965, w: 0.92710745}
-  m_LocalPosition: {x: 212.19826, y: 411.08807, z: -620.48816}
+  m_LocalRotation: {x: -0.47641832, y: 0.18493643, z: -0.01748658, w: 0.85937095}
+  m_LocalPosition: {x: 243.59032, y: 440.94696, z: -274.30646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59765,10 +59876,10 @@ MonoBehaviour:
   editorData:
     _bezierPath:
       points:
-      - {x: -10.166531, y: 29.665842, z: -10.326028}
-      - {x: -6.527152, y: 21.499971, z: -2.7121036}
-      - {x: 0.48790738, y: 6.108341, z: 12.272386}
-      - {x: 2.0103257, y: 2.932945, z: 15.562487}
+      - {x: -10.166569, y: 29.665844, z: -10.326093}
+      - {x: -6.5272064, y: 21.499977, z: -2.7122023}
+      - {x: 0.48787543, y: 6.1083465, z: 12.272313}
+      - {x: 2.0102966, y: 2.9329486, z: 15.562424}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -60288,7 +60399,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cc83b53e53065834a8b80f5b4dbc2bf3, type: 2}
     - {fileID: 11400000, guid: 5e1d67f038184d94792bf11014af24d1, type: 2}
     - {fileID: 11400000, guid: 7a6b026da71da8e4fb6a860a5c8f3531, type: 2}
-    - {fileID: 11400000, guid: 0510232a6a8d1ee4784179c459a485a9, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -60337,20 +60447,6 @@ MonoBehaviour:
         - m_Target: {fileID: 1839504422}
           m_TargetAssemblyTypeName: DefaultNamespace.Aerocarrier, Assembly-CSharp
           m_MethodName: ChangeMat
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1839504422}
-          m_TargetAssemblyTypeName: DefaultNamespace.Aerocarrier, Assembly-CSharp
-          m_MethodName: OnSceneSwitched
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -104584,6 +104680,8 @@ MonoBehaviour:
   _point0: {fileID: 2100885274}
   _point1: {fileID: 2104993924}
   _staticParent: {fileID: 1640117386}
+  _audioController: {fileID: 963194232}
+  _shakeController: {fileID: 707447488}
   _explosionPS:
     Particle: {fileID: 5494079109708021059, guid: 7ec5832d273165f4194f8ab52d27becc,
       type: 3}

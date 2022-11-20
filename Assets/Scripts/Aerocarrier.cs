@@ -1,7 +1,5 @@
-﻿using System;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Extensions;
-using JetBrains.Annotations;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -49,14 +47,17 @@ namespace DefaultNamespace
         public void OnSceneSwitched()
         {
             _index1++;
+            //Debug.Log(_index1);
 
             if (_index1 == 5)
             {
+                Debug.Log("dis");
                 _machineGunSound.enabled = false;
             }
             
             if (_index1 == 6)
             {
+                Debug.Log("en");
                 _machineGunSound.enabled = true;
             }
 
