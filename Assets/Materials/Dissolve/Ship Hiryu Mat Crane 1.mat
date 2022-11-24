@@ -7,10 +7,17 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dissolve
+  m_Name: Ship Hiryu Mat Crane 1
   m_Shader: {fileID: 4800000, guid: 8f448cd4d5dac5047b5f9a86cb739085, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ValidKeywords:
+  - _USE_GRADIENT_ON
+  m_InvalidKeywords:
+  - TCP2_DISABLE_WRAPPED_LIGHT
+  - TCP2_SPEC_TOON
+  - _METALLICGLOSSMAP
+  - _NORMALMAP
+  - _SPECGLOSSMAP
+  - _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -25,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: a681b0611e17c46439f89d3fb5834ab0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -48,39 +55,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _InnerRamp:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bccd566f43767a348b8353f83945a89b, type: 3}
+        m_Texture: {fileID: 2800000, guid: eab5c4d495ebac440ad3362bc35b6ce5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicSmooth:
-        m_Texture: {fileID: 2800000, guid: a76dbcd0031b7e5458ea35586d7e87dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec4345eb75854aa4a821f4ca5abb2d5e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
-        m_Texture: {fileID: 2800000, guid: c701d8bbcea7c2c4abbf9c22ee81138a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Normal:
-        m_Texture: {fileID: 2800000, guid: c885a16ca1b296c44ad65dde4df29024, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _PackedMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -92,46 +79,53 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Ramp2:
-        m_Texture: {fileID: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: ebfd4187c2e00594db626fdd3764b533, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpAmt: 10
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DisplaceAmount: 6
     - _DstBlend: 0
     - _EdgeSize: 0.11
-    - _Fresnel: 3
-    - _GlossMapScale: 1
+    - _EnableOutline: 0
+    - _GlossMapScale: 0.65
     - _Glossiness: 1
     - _GlossyReflections: 1
-    - _Metallic: 1
+    - _Metallic: 0
+    - _MetallicValue: 1
     - _Mode: 0
     - _NoiseStrength: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _RampSmooth: 0.119
+    - _RampSmoothAdd: 0.556
+    - _RampThreshold: 0.797
+    - _RimMax: 0.85
+    - _RimMin: 0.6
+    - _RimStrength: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
+    - _SpecBlend: 0.183
+    - _SpecSmooth: 0.143
+    - _SpecularHighlights: 0
     - _SrcBlend: 1
+    - _TCP2_DISABLE_WRAPPED_LIGHT: 1
+    - _TCP2_RAMPTEXT: 0
+    - _TCP2_SPEC_TOON: 1
+    - _TCP2_STYLIZED_FRESNEL: 0
     - _UVSec: 0
-    - _Use_Gradient: 0
+    - _Use_Gradient: 1
     - _ZWrite: 1
-    - _cutoff: 0.574
-    - _cutoffTemp: 0.488
-    - _glowFrequency: 1
-    - _glowMax: 1
-    - _glowMin: 0
-    - _marchDistance: 0.5
-    - _numSteps: 4
+    - _cutoff: 0.681
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EdgeColor1: {r: 22.036606, g: 0.7179529, b: 0, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HColor: {r: 1, g: 0.95553535, b: 0.6924528, a: 1}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
+    - _SColor: {r: 0.18342869, g: 0.1781417, b: 0.2264151, a: 1}
   m_BuildTextureStacks: []

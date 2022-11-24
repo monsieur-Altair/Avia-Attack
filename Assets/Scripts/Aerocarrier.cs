@@ -1,5 +1,7 @@
-﻿using DG.Tweening;
+﻿using System.Collections;
+using DG.Tweening;
 using Extensions;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -10,6 +12,11 @@ namespace DefaultNamespace
         [SerializeField] private Material _newMat;
         [SerializeField] private int _index = 11;
         [SerializeField] private AudioSource _machineGunSound;
+
+        [SerializeField] private Material[] _dissolveMats;
+        [SerializeField] private float _dissolveDur;
+        [SerializeField] private float _cutoffValue = 0;
+        
         private int _index1 = -1;
         private void Awake()
         {
@@ -37,6 +44,34 @@ namespace DefaultNamespace
             
         }
 
+        [UsedImplicitly]
+        public void ChangeToDissolve()
+        {
+            Material[] materials = _meshRenderer.sharedMaterials;
+
+            for (int i = 0; i < materials.Length; i++)
+            {
+                materials[i] = _dissolveMats[i];
+            }
+
+            StartCoroutine(Changing());
+        }
+
+        private IEnumerator Changing()
+        {
+            float elapsed = 0.0f;
+            while (elapsed<_dissolveDur)
+            {
+                foreach (Material mat in _dissolveMats)
+                {
+                    mat.SetFloat("_cutoff", _cutoffValue);
+                }
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        [UsedImplicitly]
         public void ChangeMat()
         {
             Material[] materials = _meshRenderer.sharedMaterials;
