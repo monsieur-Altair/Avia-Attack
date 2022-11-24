@@ -73,10 +73,10 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortionBlend: 0.633
+    - _DistortionBlend: 0.604
     - _DistortionEnabled: 1
-    - _DistortionStrength: 13.14
-    - _DistortionStrengthScaled: 1.314
+    - _DistortionStrength: 962.6
+    - _DistortionStrengthScaled: 96.26
     - _DstBlend: 10
     - _EmissionEnabled: 0
     - _FlipbookMode: 0
