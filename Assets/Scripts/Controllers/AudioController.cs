@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using DG.Tweening;
 using Extensions;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -19,9 +20,11 @@ namespace DefaultNamespace
         [SerializeField] private float _sabatonDur= 4f;
         [SerializeField] private Ease _soundEase;
         [SerializeField] private Vector2 _soundIntervalRange;
+        [SerializeField] private AudioSource _nuclearSound;
         
         private float _elapsedTime;
         private int _explosionIndex;
+        private int _index = -1;
 
         private void Awake()
         {
@@ -34,6 +37,16 @@ namespace DefaultNamespace
             _elapsedTime += Time.deltaTime;
         }
 
+        public void OnSceneSwitched()
+        {
+            _index++;
+
+            if (_index == 19)
+            {
+                _sabatonSource.DoVolume(_sabatonSource.volume, 0.0f, 3f).SetEase(Ease.Linear);
+            }
+        }
+
         public void OnFired()
         {
             _cannonSound[_explosionIndex].Play();
@@ -41,6 +54,12 @@ namespace DefaultNamespace
             _explosionIndex++;
         }
 
+        public void OnNuclear()
+        {
+            _nuclearSound.Play();
+        }
+        
+        [UsedImplicitly]
         public void WaterSplashed()
         {
             _waterSplashSound.Play();
@@ -55,12 +74,12 @@ namespace DefaultNamespace
 
         private IEnumerator PlayAmbient()
         {
-            float dur = 88.0f;
+            float dur = 100.0f;
             while (_elapsedTime<dur)
             {
                 float delay = Random.Range(_soundIntervalRange.x, _soundIntervalRange.y);
                 yield return new WaitForSeconds(delay);
-                _ambientSource.clip = _ambientSounds[UnityEngine.Random.Range(0, _ambientSounds.Length - 1)];
+                _ambientSource.clip = _ambientSounds[Random.Range(0, _ambientSounds.Length - 1)];
                 _ambientSource.Play();
             }
         }

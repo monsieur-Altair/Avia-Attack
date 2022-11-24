@@ -1,6 +1,7 @@
 ﻿
 using DG.Tweening;
 using Extensions;
+using JetBrains.Annotations;
 using PathCreation;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -91,13 +92,14 @@ public class Plane : TimelineObject
     }
 #endif
    
-
+    [UsedImplicitly]
     public void OnFarSceneStarted()
     {
         Debug.LogError("on far started");
         _planeModel.localRotation = Quaternion.Euler(-60, 0, 180);
     }
 
+    [UsedImplicitly]
     public void OnFarSceneEnded()
     {
         Debug.LogError("on far ended");
@@ -109,6 +111,7 @@ public class Plane : TimelineObject
         _planeModel.localRotation = rot;
     }
 
+    [UsedImplicitly]
     public void Explode()
     {
         Debug.LogError("explode1");
@@ -119,5 +122,10 @@ public class Plane : TimelineObject
         _personalExplosion.Play(true);
         _personalExplosion.transform.parent = null;
         Extensionss.Wait(_delay).OnComplete(() => _personalSmokeFlow.Play(true));
+    }
+
+    public void ChangeToDissolve()
+    {
+        
     }
 }

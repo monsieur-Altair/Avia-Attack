@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using Extensions;
+using JetBrains.Annotations;
 using Pool_And_Particles;
 using UnityEngine;
 
@@ -20,9 +21,9 @@ namespace DefaultNamespace
         [SerializeField] private Transform _staticParent;
         [SerializeField] private float _rad = 10f;
         [Space, SerializeField] private ParticleSystem _waterSplashPS;
-        [Space, SerializeField] private List<ParticleSystem> _lastExplosionsPS;
+        //[Space, SerializeField] private List<ParticleSystem> _lastExplosionsPS;
         
-        private AudioSource[] _audioSource;
+        //private AudioSource[] _audioSource;
         
         private float _localBot;
         private float _localTop;
@@ -94,28 +95,30 @@ namespace DefaultNamespace
                 SpawnExplosion();
             }
 
-            _audioSource = GetComponents<AudioSource>();
+            //_audioSource = GetComponents<AudioSource>();
         }
 
+        [UsedImplicitly]
         public void OnLastExploded()
         {
-            if (_lastExplosionsPS != null)
-            {
-                float[] intervals = {0.0f, 0.3f, 1.2f};
-                for (int i = 0; i < _lastExplosionsPS.Count; i++)
-                {
-                    ParticleSystem ps = _lastExplosionsPS[i];
-                    int i1 = i;
-                    Extensionss.Wait(intervals[i])
-                        .OnComplete(() =>
-                        {
-                            _audioSource[i1].Play();
-                            ps.Play(true);
-                        });
-                }
-            }
+            // if (_lastExplosionsPS != null)
+            // {
+            //     float[] intervals = {0.0f, 0.3f, 1.2f};
+            //     for (int i = 0; i < _lastExplosionsPS.Count; i++)
+            //     {
+            //         ParticleSystem ps = _lastExplosionsPS[i];
+            //         int i1 = i;
+            //         Extensionss.Wait(intervals[i])
+            //             .OnComplete(() =>
+            //             {
+            //                 _audioSource[i1].Play();
+            //                 ps.Play(true);
+            //             });
+            //     }
+            // }
         }
         
+        [UsedImplicitly]
         public void OnWaterSplashed()
         {
             if (_waterSplashPS != null)

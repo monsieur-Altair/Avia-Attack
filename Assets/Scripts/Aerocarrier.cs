@@ -16,7 +16,11 @@ namespace DefaultNamespace
         [SerializeField] private Material[] _dissolveMats;
         [SerializeField] private float _dissolveDur;
         [SerializeField] private float _cutoffValue = 0;
-        
+        [SerializeField] private ParticleSystem _nuclearExplosion;
+        [SerializeField] private ShakeController _shakeController;
+        [SerializeField] private Plane _dissolvedPlane;
+        [SerializeField] private AudioController _audioController;
+
         private int _index1 = -1;
         private void Awake()
         {
@@ -45,7 +49,15 @@ namespace DefaultNamespace
         }
 
         [UsedImplicitly]
-        public void ChangeToDissolve()
+        public void OnNuclear()
+        {
+            ChangeToDissolve();
+            _nuclearExplosion.Play(true);
+            _shakeController.OnNuclear();
+            _audioController.OnNuclear();
+        }
+
+        private void ChangeToDissolve()
         {
             Material[] materials = _meshRenderer.sharedMaterials;
 
@@ -53,14 +65,20 @@ namespace DefaultNamespace
             {
                 materials[i] = _dissolveMats[i];
             }
+            _meshRenderer.sharedMaterials = materials;
 
+            if (_dissolvedPlane != null)
+            {
+                _dissolvedPlane.ChangeToDissolve();
+            }
+            
             StartCoroutine(Changing());
         }
 
         private IEnumerator Changing()
         {
             float elapsed = 0.0f;
-            while (elapsed<_dissolveDur)
+            while (elapsed<20f)
             {
                 foreach (Material mat in _dissolveMats)
                 {
@@ -84,7 +102,7 @@ namespace DefaultNamespace
             _index1++;
             //Debug.Log(_index1);
 
-            if (_index1 == 5)
+            if (_index1 is 5 or 20)
             {
                 Debug.Log("dis");
                 _machineGunSound.enabled = false;

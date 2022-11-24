@@ -62,7 +62,7 @@ namespace DefaultNamespace
         public void OnSceneSwitched()
         {
             _sceneIndex++;
-            Debug.Log("switched "+_sceneIndex);
+            //Debug.Log("switched "+_sceneIndex);
             
             foreach (CannonBullet cannonBullet in _bullets)
             {

@@ -1,4 +1,5 @@
-﻿using Pool_And_Particles;
+﻿using JetBrains.Annotations;
+using Pool_And_Particles;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -15,6 +16,7 @@ namespace DefaultNamespace
         private Pool _pool;
         private int _index;
 
+        [UsedImplicitly]
         public void OnFired()
         {
             PooledParticleSystem pfx = _explosionPS.Get(_index == 0 ? _point0 : _point1, _pool);

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cinemachine;
 using DG.Tweening;
 using UnityEngine;
 
@@ -72,6 +73,16 @@ namespace Extensions
         {
             source.volume = start;
             return DOTween.To(() => source.volume, value => source.volume = value, end, dur);
+        }
+        
+        public static Tween DoAmplitude(this CinemachineBasicMultiChannelPerlin perlin, float end, float dur)
+        {
+            return DOTween.To(() => perlin.m_AmplitudeGain, value => perlin.m_AmplitudeGain = value, end, dur);
+        }
+        
+        public static Tween DoFreq(this CinemachineBasicMultiChannelPerlin perlin, float end, float dur)
+        {
+            return DOTween.To(() => perlin.m_FrequencyGain, value => perlin.m_FrequencyGain = value, end, dur);
         }
         
         public static T GetRandom<T>(this List<T> list)

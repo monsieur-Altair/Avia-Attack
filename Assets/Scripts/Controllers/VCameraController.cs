@@ -12,7 +12,7 @@ namespace DefaultNamespace
     {
         [SerializeField] private float _returningDelay;
         [SerializeField] private CinemachineVirtualCamera[] _cameras;
-        [ShowNonSerializedField] private int _currentIndex;
+        public int CurrentIndex { get; private set; } = -1;
 
         private Vector3 _cachedTransposerDamping;
         private Vector2 _cachedComposerDamping;
@@ -21,19 +21,14 @@ namespace DefaultNamespace
         private CinemachineComposer _cinemachineComposer;
 
         public CinemachineVirtualCamera[] Cameras => _cameras;
-
-        private void Awake()
-        {
-            _currentIndex = -1;
-        }
-
+        
         public void OnSceneSwitched()
         {
-            _currentIndex++;
+            CurrentIndex++;
 
-            //Debug.LogError("switched"+_currentIndex);
+            Debug.LogError("switched"+CurrentIndex);
             
-            if(_currentIndex is 1 or 2)
+            if(CurrentIndex is 1 or 2)
                 return;
             
             SetToZero();
@@ -58,7 +53,7 @@ namespace DefaultNamespace
 
         private void SetToZero()
         {
-            CinemachineVirtualCamera camera = _cameras[_currentIndex];
+            CinemachineVirtualCamera camera = _cameras[CurrentIndex];
             
             _cinemachineTransposer = camera.GetCinemachineComponent<CinemachineTransposer>();
 
