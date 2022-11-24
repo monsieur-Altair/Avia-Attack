@@ -12,15 +12,17 @@ namespace DefaultNamespace
         [SerializeField] private Material _newMat;
         [SerializeField] private int _index = 11;
         [SerializeField] private AudioSource _machineGunSound;
-
+        
         [SerializeField] private Material[] _dissolveMats;
+        [SerializeField] private Material[] _dissolveCannonMats;
         [SerializeField] private float _dissolveDur;
         [SerializeField] private float _cutoffValue = 0;
         [SerializeField] private ParticleSystem _nuclearExplosion;
         [SerializeField] private ShakeController _shakeController;
         [SerializeField] private Plane _dissolvedPlane;
         [SerializeField] private AudioController _audioController;
-
+        [SerializeField] private MatCannonSwitcher[] _switchers;
+        
         private int _index1 = -1;
         private void Awake()
         {
@@ -71,6 +73,11 @@ namespace DefaultNamespace
             {
                 _dissolvedPlane.ChangeToDissolve();
             }
+
+            foreach (MatCannonSwitcher switcher in _switchers)
+            {
+                switcher.SwitchToDissolve();
+            }
             
             StartCoroutine(Changing());
         }
@@ -84,6 +91,12 @@ namespace DefaultNamespace
                 {
                     mat.SetFloat("_cutoff", _cutoffValue);
                 }
+                
+                foreach (Material mat in _dissolveCannonMats)
+                {
+                    mat.SetFloat("_cutoff", _cutoffValue);
+                }
+
                 elapsed += Time.deltaTime;
                 yield return null;
             }

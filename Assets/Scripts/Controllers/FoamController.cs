@@ -1,16 +1,24 @@
 ﻿using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace DefaultNamespace
 {
     public class FoamController : MonoBehaviour
     {
+        [SerializeField] private ParticleSystem _ps;
         [SerializeField] private ParticleSystemRenderer _particle;
         [SerializeField] private Transform _targetTf;
 
         [SerializeField] private float[] _heights;
         [SerializeField] private float[] _minSizes;
 
+        [UsedImplicitly]
+        public void OnStopFoam()
+        {
+            _ps.Stop(true);
+        }
+        
         private void Update()
         {
             _particle.minParticleSize = GetSize(_targetTf.position.y);
