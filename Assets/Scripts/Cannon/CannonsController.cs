@@ -86,7 +86,8 @@ namespace DefaultNamespace
             Transform target = _targets[_sceneIndex];
             SimpleCannon.NewBulletAmount = GetBulletAmount(target);
             SceneInfo sceneInfo = _sceneInfos[_sceneIndex];
-            int frameCount = _sceneIndex == 3 ? 2 : 1;
+            int forThird = Application.isEditor ? 2 : 1;
+            int frameCount = _sceneIndex == 3 ? forThird : 1;
             foreach (SimpleCannon cannon in _cannons)
             {
                 cannon.OnSceneSwitched(target, sceneInfo.MinRadCoefficient, sceneInfo.MaxRadCoefficient, 
